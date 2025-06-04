@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Prediction Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Heart Disease Prediction Form</h1>
+
+    <div class="card shadow p-4">
+      <form id="predictionForm">
+        <div class="row mb-3">
+          <div class="col">
+            <label for="weight" class="form-label">Weight (kg)</label>
+            <input type="number" step="0.1" class="form-control" id="weight" required>
+          </div>
+          <div class="col">
+            <label for="bmi" class="form-label">BMI</label>
+            <input type="number" step="0.1" class="form-control" id="bmi" required>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label for="ageCategory" class="form-label">Age Category</label>
+            <select class="form-select" id="ageCategory" required>
+              <option value="">Select</option>
+              <option value="18-24">18-24</option>
+              <option value="25-29">25-29</option>
+              <option value="30-34">30-34</option>
+              <option value="35-39">35-39</option>
+              <option value="40-44">40-44</option>
+              <option value="45-49">45-49</option>
+              <option value="50-54">50-54</option>
+              <option value="55-59">55-59</option>
+              <option value="60-64">60-64</option>
+              <option value="65-69">65-69</option>
+              <option value="70-74">70-74</option>
+              <option value="75-79">75-79</option>
+              <option value="80+">80+</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="sex" class="form-label">Sex</label>
+            <select class="form-select" id="sex" required>
+              <option value="">Select</option>
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label for="generalHealth" class="form-label">General Health</label>
+            <select class="form-select" id="generalHealth">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="exercise" class="form-label">Exercise</label>
+            <select class="form-select" id="exercise">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label for="depression" class="form-label">Depression</label>
+            <select class="form-select" id="depression">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="diabetes" class="form-label">Diabetes</label>
+            <select class="form-select" id="diabetes">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label for="smokingHistory" class="form-label">Smoking History</label>
+            <select class="form-select" id="smokingHistory">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="alcoholConsumption" class="form-label">Alcohol Consumption</label>
+            <select class="form-select" id="alcoholConsumption">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-3">Predict</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="result" class="mt-4 text-center"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

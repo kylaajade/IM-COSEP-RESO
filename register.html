@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Student</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+      body {
+        background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 1000px; /* Increased width */
+        color: #333333;
+      }
+
+      h1 {
+        text-align: center;
+        color: purple;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      .form-group label {
+        font-weight: 500;
+        color: #555555;
+      }
+
+      .form-control {
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-control:focus {
+        border-color: #2563eb;
+        outline: none;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #1e3a8a;
+      }
+
+      .btn-secondary {
+        background-color: #6b7280;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background-color: #4b5563;
+      }
+
+      .modal-content {
+        border-radius: 10px;
+      }
+
+      .modal-header {
+        background-color: #011f4b;
+        color: #ffffff;
+        border-bottom: none;
+      }
+
+      .modal-footer .btn-secondary {
+        background-color: #6b7280;
+      }
+
+      .modal-footer .btn-secondary:hover {
+        background-color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1>Registration Form</h1>
+      <form id="registerUser" enctype="multipart/form-data">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="fname">First Name:</label>
+              <input type="text" class="form-control" id="fname" name="fname" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="lname">Last Name:</label>
+              <input type="text" class="form-control" id="lname" name="lname" />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="gender">Gender:</label>
+              <select class="form-control" id="gender" name="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="course">Course:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="course"
+                name="course"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phoneNUmber">Phone Number:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneNumber"
+                name="phoneNumber"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="birthday">Birthday:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="birthdate"
+                name="birthdate"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="profile">Profile:</label>
+              <input
+                type="file"
+                class="form-control"
+                id="profileImage"
+                name="profileImage"
+                accept="image/*"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="reset" class="btn btn-secondary me-2">Reset</button>
+          <button id="btnSaveUser" type="submit" class="btn btn-primary">
+            Add User
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="verificationModal"
+      tabindex="-1"
+      aria-labelledby="verificationModalLabel"
+      aria-hidden="true"
+    >
+      <div id="modal-verify" class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="verificationModalLabel">
+              Verification Ongoing
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Your registration is successful. Please check your email for
+            verification instructions.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registerUser");
+        const verificationModal = new bootstrap.Modal(
+          document.getElementById("verificationModal")
+        );
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          setTimeout(() => {
+            verificationModal.show();
+            form.reset();
+          }, 500);
+        });
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
